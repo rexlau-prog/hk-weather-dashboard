@@ -1,22 +1,189 @@
 {
   "display_name": "HK Weather — A & B",
-  "status": "awaiting",
-  "generated_utc": null,
+  "status": "paper",
+  "generated_utc": "2026-07-22T06:38:48Z",
   "source_box": "aws-dublin",
   "currency": "USD",
   "kpis": {
-    "book_equity": null,
-    "start_equity": null,
-    "realized_pnl": null,
-    "return_pct": null,
-    "open_positions": null,
-    "closed_trades": null,
-    "win_rate_pct": null,
-    "note": null
+    "book_equity": 1130.75,
+    "start_equity": 1000.0,
+    "realized_pnl": 130.75,
+    "return_pct": 13.08,
+    "open_positions": 1,
+    "closed_trades": 8,
+    "win_rate_pct": 62,
+    "note": "A crossing + B rain · paper · nominal $1k book"
   },
-  "equity_curve": { "labels": [], "values": [] },
-  "sleeves": [],
-  "open_positions": [],
-  "recent_trades": [],
-  "recent_signals": []
+  "equity_curve": {
+    "labels": [
+      "07-14",
+      "07-15",
+      "07-16",
+      "07-17",
+      "07-18",
+      "07-19",
+      "07-20"
+    ],
+    "values": [
+      1067.38,
+      1131.29,
+      1187.52,
+      1289.54,
+      1186.08,
+      1250.41,
+      1130.75
+    ]
+  },
+  "sleeves": [
+    {
+      "name": "A · afternoon crossing",
+      "trades": 1,
+      "win_pct": 0,
+      "pnl": -5.92,
+      "pf": 0.0
+    },
+    {
+      "name": "B · morning rain (NO-mode)",
+      "trades": 7,
+      "win_pct": 71,
+      "pnl": 136.67,
+      "pf": 1.63
+    }
+  ],
+  "open_positions": [
+    {
+      "market": "HK 28°C+29°C 07-21",
+      "side": "pair",
+      "notional": "$4",
+      "opened": "07-21 15:27"
+    }
+  ],
+  "recent_trades": [
+    {
+      "time": "07-20",
+      "market": "HK 27°C+28°C",
+      "side": "pair",
+      "reason": "resolved · 29°C won",
+      "return_pct": -100.0,
+      "pnl": -5.92
+    },
+    {
+      "time": "07-20",
+      "market": "HK NO-mode 29°C",
+      "side": "no",
+      "reason": "lost · mode 29°C",
+      "return_pct": -102.8,
+      "pnl": -113.74
+    },
+    {
+      "time": "07-19",
+      "market": "HK NO-mode 31°C",
+      "side": "no",
+      "reason": "won · 30°C",
+      "return_pct": 56.1,
+      "pnl": 64.33
+    },
+    {
+      "time": "07-18",
+      "market": "HK NO-mode 30°C",
+      "side": "no",
+      "reason": "lost · mode 30°C",
+      "return_pct": -102.1,
+      "pnl": -103.46
+    },
+    {
+      "time": "07-17",
+      "market": "HK NO-mode 28°C",
+      "side": "no",
+      "reason": "won · 30°C",
+      "return_pct": 98.7,
+      "pnl": 102.02
+    },
+    {
+      "time": "07-16",
+      "market": "HK NO-mode 28°C",
+      "side": "no",
+      "reason": "won · 27°C",
+      "return_pct": 55.2,
+      "pnl": 56.23
+    },
+    {
+      "time": "07-15",
+      "market": "HK NO-mode 29°C",
+      "side": "no",
+      "reason": "won · 28°C",
+      "return_pct": 63.9,
+      "pnl": 63.92
+    },
+    {
+      "time": "07-14",
+      "market": "HK NO-mode 29°C",
+      "side": "no",
+      "reason": "won · 28°C",
+      "return_pct": 62.6,
+      "pnl": 67.38
+    }
+  ],
+  "recent_signals": [
+    {
+      "time": "07-22",
+      "market": "A · crossing",
+      "side": "skip",
+      "detail": "crossed 33°C at 1348 (runmax 33.0); executable pair 33°C+34°C 0.925 > cap 0.9"
+    },
+    {
+      "time": "07-22",
+      "market": "B · rain",
+      "side": "no-trade",
+      "detail": "no rain · mode 32°C"
+    },
+    {
+      "time": "07-21",
+      "market": "A · crossing",
+      "side": "entered",
+      "detail": "28°C+29°C @ 0.002 × 2000sh (crossed 28°C at 1527)"
+    },
+    {
+      "time": "07-21",
+      "market": "B · rain",
+      "side": "no-trade",
+      "detail": "no rain · mode 31°C"
+    },
+    {
+      "time": "07-20",
+      "market": "A · crossing",
+      "side": "entered",
+      "detail": "27°C+28°C @ 0.003 × 2000sh (crossed 27°C at 1447)"
+    },
+    {
+      "time": "07-17",
+      "market": "A · crossing",
+      "side": "skip",
+      "detail": "crossed 29°C at 1538 (runmax 29.2); executable pair 29°C+30°C 1.011 > cap 0.9"
+    },
+    {
+      "time": "07-13",
+      "market": "A · crossing",
+      "side": "skip",
+      "detail": ""
+    },
+    {
+      "time": "07-12",
+      "market": "A · crossing",
+      "side": "skip",
+      "detail": ""
+    },
+    {
+      "time": "07-11",
+      "market": "A · crossing",
+      "side": "skip",
+      "detail": ""
+    },
+    {
+      "time": "07-10",
+      "market": "A · crossing",
+      "side": "skip",
+      "detail": ""
+    }
+  ]
 }
