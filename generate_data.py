@@ -87,13 +87,13 @@ def build(db_path: Path) -> dict:
         "note":           "A crossing + B rain · paper · nominal $1k book",
     }
 
-    # --- equity curve: BOOK_BASE + cumulative realized P&L by settle date ---
+    # --- equity curve: cumulative realized P&L, START AT 0 (pure P&L, not book) ---
     by_date: dict[str, float] = {}
     for r in a_res:
         by_date[r["date"]] = by_date.get(r["date"], 0.0) + (r["pnl_usd"] or 0.0)
     for r in b_res:
         by_date[r["date"]] = by_date.get(r["date"], 0.0) + (b_usd[id(r)] or 0.0)
-    labels, values, cum = [], [], BOOK_BASE
+    labels, values, cum = ["start"], [0.0], 0.0
     for d in sorted(by_date):
         cum += by_date[d]
         labels.append(d[5:])           # MM-DD
