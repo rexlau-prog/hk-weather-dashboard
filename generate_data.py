@@ -76,15 +76,19 @@ def build(db_path: Path) -> dict:
     n_win    = a_win + b_win
     total    = a_pnl + b_pnl
 
+    # Denominator = capital actually deployed (cost basis of the closed trades), NOT a notional
+    # book: both sleeves size per-event, so a fixed book would misstate return.
+    deployed = (sum((r["usd"] or 0.0) for r in a_res)
+                + sum((r["no_exec_cost"] or 0) * (r["no_exec_shares"] or 0) for r in b_res))
     kpis = {
-        "book_equity":    round(BOOK_BASE + total, 2),
-        "start_equity":   BOOK_BASE,
+        "book_equity":    round(deployed + total, 2),
+        "start_equity":   round(deployed, 2),
         "realized_pnl":   round(total, 2),
-        "return_pct":     round(100 * total / BOOK_BASE, 2),
+        "return_pct":     round(100 * total / deployed, 2) if deployed else None,
         "open_positions": len(a_open),
         "closed_trades":  n_closed,
         "win_rate_pct":   round(100 * n_win / n_closed) if n_closed else 0,
-        "note":           "A crossing + B rain · paper · nominal $1k book",
+        "note":           "A crossing + B rain · return on capital deployed",
     }
 
     # --- equity curve: cumulative realized P&L, START AT 0 (pure P&L, not book) ---
