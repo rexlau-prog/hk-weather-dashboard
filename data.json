@@ -1,7 +1,7 @@
 {
   "display_name": "HK Weather — A & B",
   "status": "paper",
-  "generated_utc": "2026-08-15T04:20:03Z",
+  "generated_utc": "2026-08-16T04:20:03Z",
   "source_box": "aws-dublin",
   "currency": "USD",
   "kpis": {
@@ -9,7 +9,7 @@
     "start_equity": 1681.97,
     "realized_pnl": -320.89,
     "return_pct": -19.08,
-    "open_positions": 0,
+    "open_positions": 1,
     "closed_trades": 18,
     "win_rate_pct": 50,
     "note": "A crossing + B rain · return on capital deployed"
@@ -70,7 +70,14 @@
       "pf": 0.54
     }
   ],
-  "open_positions": [],
+  "open_positions": [
+    {
+      "market": "HK 30°C+31°C 08-15",
+      "side": "pair",
+      "notional": "$165",
+      "opened": "08-15 13:18"
+    }
+  ],
   "recent_trades": [
     {
       "time": "08-10",
@@ -195,6 +202,18 @@
   ],
   "recent_signals": [
     {
+      "time": "08-16",
+      "market": "B · rain",
+      "side": "no-trade",
+      "detail": "no rain · mode 33°C"
+    },
+    {
+      "time": "08-15",
+      "market": "A · crossing",
+      "side": "entered",
+      "detail": "30°C+31°C @ 0.794 × 208sh (crossed 30°C at 1318)"
+    },
+    {
       "time": "08-13",
       "market": "B · rain",
       "side": "no-trade",
@@ -250,18 +269,6 @@
     },
     {
       "time": "08-08",
-      "market": "B · rain",
-      "side": "no-trade",
-      "detail": "no rain · mode 34°C"
-    },
-    {
-      "time": "08-07",
-      "market": "A · crossing",
-      "side": "skip",
-      "detail": "crossed 33°C at 1347 (runmax 33.2); executable pair 33°C+34°C 0.920 > cap 0.9"
-    },
-    {
-      "time": "08-07",
       "market": "B · rain",
       "side": "no-trade",
       "detail": "no rain · mode 34°C"
