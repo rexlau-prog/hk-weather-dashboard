@@ -1,7 +1,7 @@
 {
   "display_name": "HK Weather — A & B",
   "status": "paper",
-  "generated_utc": "2026-08-19T04:20:02Z",
+  "generated_utc": "2026-08-21T04:20:02Z",
   "source_box": "aws-dublin",
   "currency": "USD",
   "kpis": {
@@ -200,6 +200,12 @@
   "recent_signals": [
     {
       "time": "08-19",
+      "market": "A · crossing",
+      "side": "skip",
+      "detail": "crossed 32°C at 1309 (runmax 32.1); executable pair 32°C+33°C 1.030 > cap 0.9"
+    },
+    {
+      "time": "08-19",
       "market": "B · rain",
       "side": "no-trade",
       "detail": "no rain · mode 32°C"
@@ -263,12 +269,6 @@
       "market": "A · crossing",
       "side": "skip",
       "detail": "crossed 34°C at 1418 (runmax 34.1); executable pair 34°C+35°C 1.030 > cap 0.9"
-    },
-    {
-      "time": "08-11",
-      "market": "B · rain",
-      "side": "no-trade",
-      "detail": "no rain · mode 34°C"
     }
   ]
 }
