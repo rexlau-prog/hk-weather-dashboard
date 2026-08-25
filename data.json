@@ -1,16 +1,16 @@
 {
   "display_name": "HK Weather — A & B",
   "status": "paper",
-  "generated_utc": "2026-08-24T04:20:03Z",
+  "generated_utc": "2026-08-25T04:20:03Z",
   "source_box": "aws-dublin",
   "currency": "USD",
   "kpis": {
-    "book_equity": 1563.44,
-    "start_equity": 2067.56,
-    "realized_pnl": -504.12,
-    "return_pct": -24.38,
+    "book_equity": 1720.92,
+    "start_equity": 2274.58,
+    "realized_pnl": -553.66,
+    "return_pct": -24.34,
     "open_positions": 0,
-    "closed_trades": 21,
+    "closed_trades": 23,
     "win_rate_pct": 48,
     "note": "A crossing + B rain · return on capital deployed"
   },
@@ -34,7 +34,9 @@
       "08-03",
       "08-10",
       "08-14",
-      "08-15"
+      "08-15",
+      "08-21",
+      "08-22"
     ],
     "values": [
       0.0,
@@ -55,7 +57,9 @@
       -321.52,
       -320.89,
       -429.57,
-      -504.12
+      -504.12,
+      -449.91,
+      -553.66
     ]
   },
   "sleeves": [
@@ -68,14 +72,30 @@
     },
     {
       "name": "B · morning rain (NO-mode)",
-      "trades": 15,
-      "win_pct": 40,
-      "pnl": -587.08,
-      "pf": 0.42
+      "trades": 17,
+      "win_pct": 41,
+      "pnl": -636.62,
+      "pf": 0.43
     }
   ],
   "open_positions": [],
   "recent_trades": [
+    {
+      "time": "08-22",
+      "market": "HK NO-mode 31°C",
+      "side": "no",
+      "reason": "lost · mode 31°C",
+      "return_pct": -101.7,
+      "pnl": -103.75
+    },
+    {
+      "time": "08-21",
+      "market": "HK NO-mode 29°C",
+      "side": "no",
+      "reason": "won · 31°C",
+      "return_pct": 51.6,
+      "pnl": 54.21
+    },
     {
       "time": "08-15",
       "market": "HK 30°C+31°C",
@@ -179,25 +199,15 @@
       "reason": "resolved · 30°C won",
       "return_pct": -100.0,
       "pnl": -4.0
-    },
-    {
-      "time": "07-20",
-      "market": "HK 27°C+28°C",
-      "side": "pair",
-      "reason": "resolved · 29°C won",
-      "return_pct": -100.0,
-      "pnl": -5.92
-    },
-    {
-      "time": "07-20",
-      "market": "HK NO-mode 29°C",
-      "side": "no",
-      "reason": "lost · mode 29°C",
-      "return_pct": -102.8,
-      "pnl": -113.74
     }
   ],
   "recent_signals": [
+    {
+      "time": "08-25",
+      "market": "B · rain",
+      "side": "no-trade",
+      "detail": "no rain · mode 32°C"
+    },
     {
       "time": "08-24",
       "market": "B · rain",
@@ -263,12 +273,6 @@
       "market": "B · rain",
       "side": "no-trade",
       "detail": "no rain · mode 33°C"
-    },
-    {
-      "time": "08-12",
-      "market": "A · crossing",
-      "side": "skip",
-      "detail": "crossed 34°C at 1308 (runmax 34.2); executable pair 34°C+35°C 0.980 > cap 0.9"
     }
   ]
 }
